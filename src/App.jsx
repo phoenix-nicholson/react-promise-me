@@ -1,3 +1,11 @@
+import { useEffect } from 'react';
+import { getOnepiece, fetchOnePiece } from './services/promise-me';
+
 export default function App() {
-  return <h1>Hello World</h1>;
+  useEffect(() => {
+    getOnepiece();
+    fetchOnePiece();
+  }, []);
+
+  return <h1>Hello world</h1>;
 }
