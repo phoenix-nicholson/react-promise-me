@@ -1,28 +1,41 @@
 /**
  * TODO:
  */
-export async function getOnepiece() {
+export async function getFilmPiece() {
   const response = await fetch(
     `https://api.jikan.moe/v4/anime?q=one piece&sfw`
   );
   const data = await response.json();
-  console.log('data', data);
+  console.log('film-data', data);
   return data;
 }
 
-export function fetchOnePiece() {
+export function fetchFilmPiece() {
   fetch(`https://api.jikan.moe/v4/anime?q=one piece&sfw`)
     .then((res) => res.json())
     .then((result) => {
-      console.log('result', result);
+      console.log('film-result', result);
     });
 }
 
 /**
  * TODO:
  */
+export async function getPinBall() {
+  const response = await fetch(`https://ponball.herokuapp.com/api/v1/machines`);
+  const data = await response.json();
+  console.log('pinball-data', data);
+  return data;
+}
+
+export function fetchPinball() {
+  fetch(`https://ponball.herokuapp.com/api/v1/machines`)
+    .then((res) => res.json())
+    .then((result) => console.log('pinball-result', result));
+}
 
 /**
+ * return data;
  * TODO:
  */
 
