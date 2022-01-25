@@ -4,6 +4,7 @@ import {
   fetchFilmPiece,
   getPinBall,
   fetchPinball,
+  getSlayerFilms,
 } from './services/promise-me';
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
     fetchFilmPiece();
     getPinBall();
     fetchPinball();
+    getSlayerFilms();
   }, []);
 
   return <h1>Hello world</h1>;

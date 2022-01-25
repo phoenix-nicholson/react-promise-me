@@ -38,6 +38,14 @@ export function fetchPinball() {
  * return data;
  * TODO:
  */
+export async function getSlayerFilms() {
+  const response = await fetch(
+    `https://api.jikan.moe/v4/anime?q=Kimetsu no yaiba&sfw`
+  );
+  const data = await response.json();
+  console.log('slayer-data', data);
+  return data;
+}
 
 /**
  * TODO:
